@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>course</title>
+    <link rel="stylesheet" href="/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <!--------------------------main----------------------------------
+---------------------------------------------------------------------->
+    <section class="sub-header">
+        <nav>
+            <a href="index.html"><img src="/img/logo.png" alt=""></a>
+            <div class="nav-links" id="nav">
+
+                <span class="material-symbols-outlined on" onclick="hideMenu()">
+                    close
+                </span>
+                <ul>
+                    <li><a href="/index.html">HOME</a></li>
+                    <li><a href="/about.html">ABOUT</a></li>
+                    <li><a href="/course.html">COURSE</a></li>
+                    <li><a href="/blog.html">BLOG</a></li>
+                    <li><a href="/contact us.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <span class="material-symbols-outlined" onclick="showMenu()">
+                menu
+            </span>
+
+
+        </nav>
+        <h1>Our certificate & online programs for 2021</h1>
+
+    </section>
+
+    <!-- ---------------------------blog page content----------------------------
+        -------------------------------------------------------------------------- -->
+
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="/img/certificate.jpg" alt="">
+                <h2>Our certificate & online programs for 2021</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus, veniam ut tempora
+                    quidem possimus, fuga blanditiis magnam perspiciatis
+                    facere vel eius! Aliquam rem, veritatis necessitatibus nisi
+                    non animi incidunt eius?</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, doloremque?
+                    In quis ipsum minima accusantium debitis temporibus repellat suscipit? Alias veniam quasi
+                    perspiciatis blanditiis cum molestias quaerat dignissimos ullam libero provident,
+                    quisquam, debitis nam molestiae voluptate perferendis at beatae!
+                    Voluptatem vitae fugit iure assumenda deserunt quas temporibus corporis illo tempora!</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea voluptates alias quas
+                    possimus, sit voluptas repudiandae labore esse excepturi consequuntur,
+                    natus culpa commodi magnam nostrum soluta
+                    delectus officiis reiciendis recusandae laudantium asperiores ab
+                    architecto minus?</p>
+                <br>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ea voluptates alias quas
+                    possimus, sit voluptas repudiandae labore esse excepturi consequuntur,
+                    natus culpa commodi magnam nostrum soluta
+                    delectus officiis reiciendis recusandae laudantium asperiores ab
+                    architecto minus?</p>
+
+                <div class="comment-box">
+                    <h3>leave a comment</h3>
+                    <form class="comment-form" onsubmit="sendEmail(); reset(); return false;">
+                        <input type="text" placeholder="Enter Name">
+                        <input type="text" placeholder="Enter Email">
+
+                        <textarea placeholder="your comment" rows="5"></textarea>
+                        <button type="submit" class="hero-btn red-btn">POST</button>
+
+
+                    </form>
+                </div>
+            </div>
+            <div class="blog-right">
+                <h3>post categories</h3>
+                <div>
+                    <span>businss analytics</span>
+                    <span>21</span>
+                </div>
+                <div>
+                    <span>businss </span>
+                    <span>255</span>
+                </div>
+                <div>
+                    <span>autocad analytics</span>
+                    <span>41</span>
+                </div>
+                <div>
+                    <span> analytics</span>
+                    <span>2</span>
+                </div>
+                <div>
+                    <span>info- analytics</span>
+                    <span>241</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!--  ----------------------------------------footer--------------------------
+------------------------------------------------------------------------------------ -->
+
+    <section class="footer">
+
+        <h4>About Us</h4>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et enim dignissimos
+            fuga quia, dolor praesentium.</p>
+
+        <div class="icons">
+            <span class="material-symbols-outlined">
+                deployed_code
+            </span>
+            <span class="material-symbols-outlined">
+                deployed_code
+            </span>
+            <span class="material-symbols-outlined">
+                deployed_code
+            </span>
+        </div>
+
+    </section>
+
+
+
+
+
+    <!---------------------------js for nav-bar action------------------------>
+
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+
+    <script>
+        function sendEmail() {
+            Email.send({
+                Host: "smtp.gmail.com",
+                Username: "username",
+                Password: "password",
+                To: 'yahygogo@gmail.com',
+                From: "you@isp.com",
+                Subject: "This is the subject",
+                Body: "And this is the body"
+            }).then(
+                message => alert(message)
+            );
+        }
+    </script>
+
+    <script>
+        let nav = document.getElementById("nav");
+
+        function showMenu() {
+            nav.style.right = "0";
+        }
+        function hideMenu() {
+            nav.style.right = "-200px";
+        }
+    </script>
+</body>
+
+</html>
